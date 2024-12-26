@@ -1,0 +1,146 @@
+.ingredients {
+  .ingr-row {
+    .ingredient-left {
+      padding-right: 20px;
+
+      .inl-list {
+        @include displayS();
+        gap: 32px;
+
+        .inl-item {
+          @include displayS($column: row, $ai: center);
+          gap: 40px;
+
+          .left-ing-main {
+            @include imgS($width: 290px, $height: 200px);
+            border-radius: 20px;
+          }
+
+          .inl-item-right {
+            @include displayS();
+            gap: 16px;
+            padding: 13px 0;
+
+            h1 {
+              @include textmaker($fsize: 24px, $fweight: 600);
+            }
+
+            p {
+              @include textmaker(
+                $color: rgba(0, 0, 0, 0.6),
+                $fsize: 16px,
+                $fweight: 400
+              );
+              margin-bottom: 16px;
+            }
+
+            .inlr-bottom {
+              @include displayS($column: row, $ai: center);
+              gap: 24px;
+
+              .inl-b-top {
+                @include displayS($column: row, $ai: center);
+                gap: 16px;
+
+                img {
+                  @include imgS($width: 40px, $height: 40px);
+                  object-fit: contain;
+                }
+
+                h4 {
+                  @include textmaker($fsize: 16px, $fweight: 700);
+                }
+              }
+
+              .vertical-line {
+                width: 1px;
+                height: 40px;
+                background-color: black;
+                border: none;
+                margin: 0;
+              }
+
+              h3 {
+                @include textmaker($color: rgba(0, 0, 0, 0.6));
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .ingredient-right {
+      padding-left: 40px;
+
+      .ir-title {
+        @include textmaker($fsize: 32px, $fweight: 600);
+        margin-bottom: 32px;
+      }
+
+      .ir-top {
+        @include displayS();
+        gap: 24px;
+        margin-bottom: 80px;
+
+        .irt-item {
+          @include displayS($column: row, $js: space-between, $ai: center);
+          gap: 20px;
+
+          img {
+            width: 180px;
+            height: 120px;
+            border-radius: 30px;
+          }
+
+          .irti-text {
+            h3 {
+              @include textmaker($fsize: 20px, $fweight: 600);
+              width: 196px;
+              margin-bottom: 16px;
+            }
+
+            h4 {
+              @include textmaker($color: rgba(0, 0, 0, 0.6));
+            }
+          }
+        }
+      }
+
+      .ir-bottom {
+        img {
+          width: 440px;
+          height: 434px;
+          object-fit: contain;
+        }
+      }
+    }
+
+    nav {
+      margin-top: 80px;
+      @include displayS($js: center, $ai: center);
+
+      .pagination {
+        @include displayS($column: row, $js: center, $ai: center);
+        gap: 16px;
+
+        .page-item {
+          .page-link {
+            border-radius: 16px;
+            @include displayS($column: row, $js: center, $ai: center);
+            @include textmaker($fsize: 18px, $fweight: 700);
+            width: 64px;
+            height: 64px;
+          }
+        }
+
+        .active {
+          .page-link {
+            border: none;
+            background-color: #000;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
